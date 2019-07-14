@@ -1,0 +1,32 @@
+
+// Primary Color
+%primary-color{
+	color: $primary-color;
+}
+%primary-bg-color{
+	background-color: $primary-color;
+}
+
+%white-color{
+	color: $color-white;
+}
+%white-bg-color{
+	background-color: $color-white;
+}
+%black-color{
+	color: $color-black;
+}
+%black-bg-color{
+	background-color: $color-black;
+}
+
+
+// .bg-success {
+//     background-color: #71c016 !important;
+// }
+// .bg-warning {
+//     background-color: #ffc100 !important;
+// }
+// .bg-info {
+//     background-color: #7859df !important;
+// }

@@ -1,0 +1,10 @@
+/*===============.listing-css===================*/
+.statusLinks {
+  border: 1px solid #e3e3e3;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; }
+  .statusLinks a {
+    color: #25a9c1; }

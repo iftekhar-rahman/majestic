@@ -1,0 +1,121 @@
+/*===============.dashboard-css===================*/ 
+
+/*=========.breadcrumb-css=============*/ 
+.breadcrumb-row {
+    margin-bottom: 10px;
+    h1 {
+        font-size: 28px;
+        line-height: 30px;
+        font-weight: 400;
+        @include all-below-med{
+            font-size: 24px;
+        }
+    }
+    .breadcrumb {
+        @extend %backtransparent;
+        padding: 0;
+        margin-bottom: 0;
+        li {
+            margin: 5px 0;
+            font-size: 16px;
+            i {
+                font-size: 20px;
+            }
+            &.active {
+                color: #6c757d;
+            }
+            a {
+                @extend %primary-color;
+            }
+        }
+    }
+    @include all-below-mobile-lg{
+       .col-sm-8{
+           width: 65%;
+       }
+       .col-sm-4{
+           width: 35%;
+       }
+    }
+}
+
+/*============== .nav-tabs ================*/
+.nav-tabs {
+    .nav-item {
+        margin-bottom: -1px;
+        .nav-link {
+            @extend %black-color;
+            border-radius: 0;
+            padding: 16px 24px 3px 24px;
+            border: 0;
+            @extend %backtransparent;
+            border-bottom: 3px solid transparent;
+            &.active {
+                border: 0;
+                border-bottom: 3px solid $primary-color;
+                @extend %primary-color;
+            }
+            @include mx-mobile-xs{
+                padding: 16px 20px 3px 20px; 
+            }
+        }
+    }
+}
+/*=========.dashboard-tabs==============*/ 
+.dashboard-tabs {
+    small {
+        line-height: 20px;
+        margin: -3px 0 1px 0 !important;
+    }
+    .datedropdown {
+        small {
+            line-height: 14px;
+            margin: 6px 0 0 0 !important;
+        }
+    }
+    h5 {
+        font-size: 16px;
+    }
+    i{
+        font-size: 40px;
+        margin-right: 20px;
+        &.mdi-calendar-heart{
+            color: $date-icon-color;
+        }
+        &.mdi-currency-usd{
+            color: $download-icon-color;
+        }
+        &.mdi-eye{
+            color: $views-icon-color;
+        }
+        &.mdi-download{
+            color: $revenue-icon-color;
+        }
+        &.mdi-flag{
+            color: $flagged-icon-color;
+        }
+    }
+    .btn {
+        height: 18px;
+    }
+    .dropdown-menu.show {
+        top: 10px !important;
+        @extend %borderradius0;
+    }
+}
+
+/*============.dashboard-table================*/ 
+.tablerow .table thead th:after, .tablerow .table thead th:before {
+    content: "\F05D";
+    right: 25px;
+    bottom: 32px;
+    @extend %posabsolute;
+    line-height: 2.5;
+    font-family: Material Design Icons;
+    font-size: 10px;
+}
+.tablerow .table thead th:before {
+    content: "\F045";
+    right: 21px;
+    bottom: 26px;
+}

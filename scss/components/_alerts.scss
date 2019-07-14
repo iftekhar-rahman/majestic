@@ -1,0 +1,42 @@
+/*========.site-alert============*/ 
+.site-alert{
+    @extend %posfixed;
+    height: 40px;
+    top: -40px;
+    left: 0;
+    z-index: 9999;
+    background-color: $alert-bg;
+    font-weight: 700;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    a{
+        color: $alert-link-color;
+        @extend %displayinline;
+        margin-left: 5px;
+    }
+    &.show-alert {
+        top: 0;
+    }
+}
+
+
+.site-wrapper.show-alert {
+    padding-top: 40px;
+}
+.dash-header.show-alert {
+    margin-top: 40px;
+}
+.site-wrapper.show-alert.hide-alert {
+    padding-top: 0px;
+}
+.dash-header.show-alert.hide-alert {
+    margin-top: 0px;
+}
+.site-wrapper {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+.site-alert.hide-alert,
+.update-message.hide-alert{
+    @extend %invisible;
+}

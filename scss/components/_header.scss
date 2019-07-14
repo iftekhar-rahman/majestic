@@ -1,0 +1,359 @@
+/*===========.header-css===============*/ 
+.dash-header{
+    @include flexbox();
+    -webkit-transition: .3s;
+    transition: .3s;
+    .brand-wrapper{
+        @extend %white-bg-color;
+        border-bottom: 1px solid #e3e3e3;
+        transition: width 0.25s ease, background 0.25s ease;
+        width: 257px;
+        height: 60px;
+        border-right: 1px solid #e3e3e3;
+        @include flexbox();
+        @include justify-content(center);
+        @include all-below-med{
+            width: 55px;
+        }
+    }
+    .navbar-logo{
+        &-mini{
+            @extend %displaynone;
+            @include all-below-med{
+                display: block !important;
+            }
+        }
+        img{
+            max-width: 150px;
+            margin: auto;
+            vertical-align: middle;
+            height: 34px;
+            
+        }
+    }
+    .brand-inner{
+        margin-left: 20px;
+        margin-right: 20px;
+        @include flexbox();
+        @include justify-content(space-between);
+        @include align-items(center);
+        @extend %w100;
+        @include all-below-med{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .navbar-brand{
+            color: #27367f;
+            font-size: 1.5rem;
+            margin-right: 0;
+            padding: .25rem 0;
+            &.navbar-logo-mini{
+                @include all-below-med{
+                    width: 35px;
+                }
+            }
+            @include all-below-med{
+                display: none;
+            }
+        }
+    }
+    .header-content{
+        @extend %white-bg-color;
+        transition: width 0.25s ease;
+        -webkit-transition: width 0.25s ease;
+        -moz-transition: width 0.25s ease;
+        -ms-transition: width 0.25s ease;
+        color: #9b9b9b;
+        padding-left: 1.062rem;
+        padding-right: 1.062rem;
+        width: calc(100% - 257px);
+        height: 60px;
+        border-bottom: 1px solid #e3e3e3;
+        @include flexbox();
+        @include all-below-med{
+            width: calc(100% - 0px);
+            padding-right: 70px;
+        }
+        .close-btn{
+            color: inherit;
+            font-size: 24px;
+            @extend %posabsolute;
+            right: 15px;
+            top: 50%;
+            margin-top: -17px;
+        }
+        .search-bar{
+            @include flexbox();
+            @include align-items(center);
+            @extend %h100;
+            label{
+                color: #9b9b9b;
+                @extend %border0;
+                margin: 0;
+                @extend %posabsolute;
+                @extend %h100;
+                @extend %textcenter;
+                left: 0;
+                width: 30px;
+                line-height: 40px;
+            }
+            .input-group{
+                background: #ececec;
+                border-radius: 4px;
+                padding: 0 .75rem;
+                @include mx-mobile-xs{
+                    display: none;
+                }
+                @include mx-mobile{
+                    display: none;
+                }
+            }
+            input{
+                @extend %w100;
+                margin-left: 20px;
+                height: 40px;
+                flex: 1 1 auto;
+                @extend %backtransparent;
+                @extend %border0;
+                &:focus{
+                    outline: none;
+                }
+            }
+            
+        }
+    }
+}
+
+.navbar-options{
+    @include flexbox();
+    @include align-items(stretch);
+    @include flex-direction(row);
+    .nav-item{
+        @include flexbox();
+        @include align-items(center);
+        margin-right:16px;
+        margin-left:16px;
+        &.dropdown{
+            .nav-link{
+                @include flexbox();
+                @include align-items(center);
+                img{
+                    max-width: 32px;
+                    max-height: 32px;
+                    @extend %borderradius50;
+                }
+                &.count-indicator{
+                    @extend %posrelative;
+                    @extend %textcenter;
+                    padding: 0;
+                    color: #9b9b9b;
+                    i{
+                        font-size: 24px;
+                        margin-right: 0;
+                        vertical-align: middle;
+                        color: inherit;
+                    }
+                    &:hover{
+                        color: #9b9b9b
+                    }
+                    .count{
+                        @extend %posabsolute;
+                        left: 59%;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+                        @extend %primary-bg-color;
+                        top: 0px;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-dropdown{
+        @extend %posabsolute;
+        font-size: 0.9rem;
+        margin-top: 0;
+        right: -15px;
+        left: auto!important;
+        top: 60px!important;
+        .dropdown-item {
+            margin-bottom: 0;
+            padding: .65rem 1.5rem;
+            @extend %cursorpointer;
+            @include flexbox();
+            a{
+                color: #212529;
+            }
+            .ellipsis{
+                max-width: 200px;
+                @extend %overflowhidden;
+                text-overflow: ellipsis;
+            }
+            .item-thumbnail{
+                img{
+                    @extend %borderradius50;
+                    width: 36px;
+                    height: 36px;
+                    vertical-align: middle;
+                } 
+                .item-icon{
+                    @extend %borderradius50;
+                    @include flexbox();
+                    @include align-items(center);
+                    @include justify-content(center);
+                    width: 36px;
+                    height: 36px;
+                    vertical-align: middle;
+                    i{
+                        font-size: 17px;
+                        @extend %white-color;
+                    }
+                }
+            }
+            &:hover{
+                background: #eaeaf1;
+            }
+        }
+    }
+    .dropdown-menu{
+        @extend %border0;
+        box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.2);
+        min-width: 255px;
+        animation-name: dropdownAnimation;
+        animation-duration: 0.25s;
+        animation-fill-mode: both;
+        @extend %borderradius0;
+        @include all-below-med{
+            position: fixed !important;
+            left: 0 !important;
+            right: 0;
+            width: calc(100% - 35px);
+            margin: 0 auto;
+        }
+        .dropdown-header{
+           @extend %black-color;
+        }
+        .item-content{
+            padding-left: 15px;
+            width: calc(100% - 36px);
+            h6{
+                font-size: 15px;
+            }
+            p{
+                font-size: 14px;
+            }
+        }
+    }
+}
+.site-wrapper.show-alert .navbar-options .navbar-dropdown{
+    @include all-below-med{
+        top: 100px !important;
+    }
+}
+.site-wrapper.show-alert.hide-alert .navbar-options .navbar-dropdown{
+    @include all-below-med{
+        top: 60px !important;
+    }
+}
+
+// Profile Dropdown
+.profile-toggle{
+    width: 40px;
+    height: 40px;
+    @extend %borderradius50;
+    @extend %overflowhidden;
+}
+.profileDropdownMenu{
+    @extend %posabsolute;
+    right: 0;
+    left: auto!important;
+    top: 50px!important;
+    animation-name: dropdownAnimation;
+    animation-duration: 0.25s;
+    animation-fill-mode: both;
+    .dropdown-item{
+        margin-bottom: 0;
+        padding: .65rem 1.5rem;
+        @extend %cursorpointer;
+        @include flexbox();
+    }
+    .proDropdown-header {
+        @include flexbox();
+        padding: .65rem 1.5rem;
+        border-bottom:1px solid rgba(120, 130, 140, 0.13);
+        .image {
+            width: 80px;
+            height: 80px;
+            @extend %borderradius5;
+            @extend %overflowhidden;
+            margin-right: 5px;
+        }
+        
+        .proDropdown-content {
+            padding-left: 10px;
+            .title {
+                font-size: 18px;
+            }
+            p {
+                font-size: 13px;
+            }
+            .btn {
+                border-radius: 50px;
+                font-size: 12px;
+                height: 30px;
+                padding: 0;
+                min-width: 90px;
+                margin-top: 4px;
+            }
+        }
+        
+    }
+}
+
+.sub-menu{
+    > .menu-item-has-children{
+        >a{
+            // position: relative;
+            &:after{
+                content: "\F140";
+                @extend %displayinline;
+                font-family: "Material Design Icons";
+                -webkit-transition: all 0.4s ease;
+                -moz-transition: all 0.4s ease;
+                -ms-transition: all 0.4s ease;
+                -o-transition: all 0.4s ease;
+                transition: all 0.4s ease;
+            }
+        }
+        &.active{
+            >a{
+                &:after{
+                    -webkit-transform: rotate(-180deg);
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        &>.sub-menu + span.menu-expand{
+            @extend %displaynone;
+        }
+    }
+}
+.menu-item-has-children{
+    .sub-menu + span.menu-expand{
+        >i{
+            -webkit-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -ms-transition: all 0.4s ease;
+            -o-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+    }
+    &.active{
+        &>.sub-menu + span.menu-expand{
+            &>i{
+                -webkit-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}

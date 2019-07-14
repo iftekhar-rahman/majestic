@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Edit Vehicles</title>
+
+  <!--Libraries-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+  <!-- Plugins -->
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+  <!--Theme specific styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 
+  // Uncomment the below css file and change the color as the clients requirement 
+  -->
+  <!-- <link rel="stylesheet" href="css/theme-color.css"> -->
+
+  <!--Core jQuery-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="site-wrapper">
+    
+    <!-- .site-alert satrts -->
+    <div class="site-alert d-flex justify-content-center align-items-center w-100">
+      <p>There ara 3 critical alerts <a href="#" target="_blank">Click here</a></p>
+    </div><!-- .site-alert ends -->
+    <!-- .update-message satrts -->
+    <div class="update-message d-flex justify-content-center align-items-center w-100">
+      Record Updated
+    </div><!-- .update-message ends -->
+    <header class="dash-header fixed-top">
+      <!-- Brands -->
+      <div class="brand-wrapper">
+        <div class="brand-inner">
+          <a href="./index.html" class="navbar-brand navbar-logo">
+            <img src="img/logo.png" alt="site Logo" />
+          </a>
+          <a href="./index.html" class="navbar-brand navbar-logo-mini">
+            <img src="./img/autohq-mobile-a.png" alt="" />
+          </a>
+          <button class="navbar-toggler off-canvas-toggler d-none d-lg-block align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-sort-variant"></span>
+          </button>
+        </div>
+      </div>
+      <!-- Header Contents -->
+      <div class="header-content">
+        <!-- .search-bar starts -->
+        <div class="search-bar mr-md-5 w-100 ">
+          <div class="input-group">
+            <label for="h-search-bar">
+              <i class="mdi mdi-magnify"></i>
+            </label>
+            <input type="text" id="h-search-bar" class="form-contol" placeholder="Search now" />
+          </div>
+        </div><!-- .search-bar ends -->
+        <!-- .navbar-nav starts -->
+        <ul class="navbar-nav navbar-options">
+          <li class="nav-item dropdown mr-1">
+            <a class="nav-link count-indicator d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="mdi mdi-message-text mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
+              <p class=" dropdown-header">Messages</p>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <img src="img/avatars/face1.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="item-content flex-grow">
+                  <h6 class="ellipsis font-weight-normal">David Grey
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    The meeting is cancelled
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <img src="img/avatars/face2.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="item-content flex-grow">
+                  <h6 class="ellipsis font-weight-normal">Tim Cook
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    New product launch
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <img src="img/avatars/face3.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="item-content flex-grow">
+                  <h6 class="ellipsis font-weight-normal"> Johnson
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    Upcoming board meeting
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown mr-4 position-relative">
+            <a class="nav-link count-indicator d-flex align-items-center justify-content-center notification-dropdown" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="true">
+              <i class="mdi mdi-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-success">
+                    <i class="mdi mdi-information mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-warning">
+                    <i class="mdi mdi-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-info">
+                    <i class="mdi mdi-account-box mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown ml-2">
+            <a class="nav-link profile-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="true">
+              <img src="./img/avatars/face10.jpg" alt="">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right profileDropdownMenu navbar-dropdown animated flipInY" aria-labelledby="profileDropdown">
+              <div class="proDropdown-header">
+                <div class="image">
+                  <img src="./img/avatars/face12.jpg" alt="">
+                </div>
+                <div class="proDropdown-content">
+                  <h3 class="title">Steve Jobs</h3>
+                  <p>varun@gmail.com</p>
+                  <a href="" class="btn btn-sm">view profile</a>
+                </div>
+              </div>
+              <ul class="dropdown-list">
+                <li class="dropdown-item"><a href="#"><i class="ti-user"></i>
+                    My Profile</a></li>
+                <li class="dropdown-item"><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                <li class="dropdown-item border-bottom"><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                <li class="dropdown-item border-bottom"><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                <li class="dropdown-item "><a href="#"><i class="ti-settings"></i> Login Out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- .navbar-nav ends -->
+        <button class="close-btn navbar-toggler navbar-toggler-right align-self-center d-block d-lg-none" type="button" data-toggle="minimize">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </header>
+    <div class="page-body-wrapper container-fluid">
+      <!-- Offcanvas Markup -->
+      <!-- Off Canvas Menu -->
+      <div class="offcanvas-menu-wrapper">
+        <aside class="off-canvas-wrapper">
+          <!-- Off Canvas Body -->
+          <div class="off-canvas-inner">
+            <div class="user-details-block">
+              <div class="image">
+                <img src="img/avatars/face14.jpg" alt="">
+              </div>
+              <div class="user-title text-center">
+                <p>Jhon Dowe</p>
+              </div>
+            </div>
+            <!-- mobile menu navigation start -->
+            <nav class="off-activation off-canvas-nav">
+              <ul class="sidemenu offcanvas-menu">
+                <li class="menu-item">
+                  <a href="#"><i class="mdi mdi-home menu-icon"></i><span class="menu-title">Dashboard</span></a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#"><i class="mdi mdi-grid-large menu-icon"></i><span class="menu-title">Listing (Basic)</span></a>
+                  <ul class="sub-menu">
+                    <li class="menu-item-has-children">
+                      <a href="#">Basic 1</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog.html">sub item</a></li>
+                        <li><a href="blog-left-sidebar.html">sub item</a></li>
+                        <li><a href="blog-right-sidebar.html">sub item</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Basic 2</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog-list.html">subitem 1</a></li>
+                        <li><a href="blog-list-left-sidebar.html">subitem 2</a></li>
+                        <li><a href="blog-list-right-sidebar.html">subitem 2</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Basic 3</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog-details.html">subitem 1</a></li>
+                        <li><a href="blog-details-gallery.html">subitem 2</a></li>
+                        <li><a href="blog-details-audio.html">subitem 3</a></li>
+                        <li><a href="blog-details-video.html">subitem 4</a></li>
+                        <li><a href="blog-details-left-sidebar.html">subitem 5</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="#"><i class="mdi mdi-grid-large menu-icon"></i><span class="menu-title">Listing (Basic)</span></a>
+                </li>
+                <li class="menu-item">
+                  <a href="#"><i class="mdi mdi-settings "></i><span class="menu-title">Edit</span></a>
+                </li>
+                <li class="menu-item">
+                  <a href="#"><i class="mdi mdi-login "></i><span class="menu-title">Login</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+      </div>
+      <!-- .main-panel starts -->
+      <div class="main-panel">
+        <!-- .content-wrappe starts -->
+        <div class="content-wrapper">
+          <!-- .breadcrumb row starts here -->
+          <div class="row breadcrumb-row">
+            <div class="col-sm-8 align-self-center">
+              <h1 class="text-themecolor mb-0 mt-0">Edit Vehicles</h1>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li><i class="mdi mdi-chevron-right"></i></li>
+                <li class="breadcrumb-item active">Edit Vehicles</li>
+              </ol>
+            </div>
+            <div class="col-sm-4 breadcrumb-btn d-flex justify-content-end align-self-center">
+              <button class="btn hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</button><!-- .button ends -->
+            </div>
+          </div>
+          <!-- .breadcrumb row starts here -->
+
+          <!-- .edit-panel starts -->
+          <div class="row edit-vehicle-header" id="header">		
+            <div class="col-md-12">
+              <div class="box">
+                <div class="box-header d-flex justify-content-between">
+                  <div class="title bolder2" id="prodTitle">
+                    U2741:&nbsp;&nbsp;Ford Mondeo Titanium 130 AG08FUV<input id="stockCode" type="hidden" value="U2741">
+                  </div>
+                  <div class="box-link d-flex">
+                    <ul class="box-toolbar">
+                      <li class="toolbar-link">
+                        <a href="http://1105.stg11.autohq.co.uk/ford-norwich/mondeo-titanium-130-U2741"><i class="mdi mdi-earth"></i> Visit Web Page</a>
+                      </li>
+                    </ul>	
+                    <ul class="box-toolbar">
+                      <li class="toolbar-link">
+                        <a href="?page=vehicle-browse">Close <i class="mdi mdi-close"></i></a>
+                      </li>
+                    </ul>	
+                  </div>			
+                </div><!--box-header-->
+              </div><!--box-header-->
+            </div><!--md-->
+          </div>
+          <!-- .edit-panel ends -->
+
+          <!-- tabs row stars -->
+          <div class="row" id="tabs">	
+            <!-- .col starts -->
+            <div class="col-md-12">
+              <!-- .botab-wrapperx starts -->
+              <div class="tab-wrapper">
+                <!-- .tab-header starts -->
+                <div class="tab-header">
+                  <div class="nav nav-tabs nav-tabs-left">
+                    <a class="active" href="#BasicPanel" data-toggle="tab">Basic Data</a>
+                    <a href="#PricingPanel" data-toggle="tab">Pricing</a>
+                    <a href="#ImagePanel" data-toggle="tab">Images</a>
+                    <a href="#DescPanel" data-toggle="tab">Description</a>
+                    <a href="#TechPanel" data-toggle="tab">Technical</a>
+                    <a href="#LogsPanel" data-toggle="tab">Logs</a>
+                  </div>
+                </div><!-- .tab-header ends -->
+                <!-- .tab-content-wrap starts -->
+                <div class="tab-content-wrap padded">
+                  <!-- .tab-conten starts -->
+                  <div class="tab-content">
+                    <!-- BasicPanel .tab-pane starts -->
+                    <div class="tab-pane active" id="BasicPanel">  
+                      <div class="row">
+                        <!-- .col starts -->
+                        <div class="col-md-6">
+                          <!-- .box starts -->
+                          <div class="box">
+                            <div class="box-content">
+                              <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <td>Registration: </td>
+                                    <td>
+                                      <input id="reg" type="text" maxlength="70" value="AG08FUV" style="text-align: left;" >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>VIN Number: </td>
+                                    <td>
+                                      <input id="vinNum" type="text" maxlength="70" value="WF0EXXGBBE8R35604" style="text-align: left;" >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Make: </td>
+                                    <td>
+                                      <input id="make" type="text" maxlength="70" value="Ford" style="text-align: left;" >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Model: </td>
+                                    <td>
+                                      <input id="model" type="text" maxlength="70" value="Mondeo" style="text-align: left;" >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Variant: </td>
+                                    <td>
+                                      <input id="variant" type="text" maxlength="70" value="Titanium 130" style="text-align: left;" >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                      <td>Manufacturers Colour: </td>
+                                      <td>
+                                        <input id="manuColour" type="text" maxlength="70" value="" style="text-align: left;" >
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Basic Colour: </td>
+                                    <td>
+                                        <input id="colour" type="text" maxlength="70" value="BLUE" style="text-align: left;" >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Number of Doors: </td>
+                                    <td>
+                                      <input id="numDoors" type="text" maxlength="70" value="5" style="text-align: left;" >
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Registration Date: </td>
+                                    <td>
+                                      <input id="regDate" type="text" maxlength="70" value="14-03-2008" style="text-align: left;" >
+                                      <script>
+                                        // $('#regDate').datepicker({
+                                        // orientation: 'top left',
+                                        // dateFormat: "dd-mm-yy",
+                                        // todayBtn: "linked",
+                                        // showButtonPanel: true,
+                                        // firstDay: 1,
+                                        // autoclose: true,
+                                        // todayHighlight: true
+                                        // }); 
+                                        // renderTimePicker('14-03-2008');
+                                      </script>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div><!--box-content ends-->
+                          </div><!-- .box ends -->
+                        </div><!-- .col ends -->
+                        <!-- .col starts -->
+                        <div class="col-md-6">
+                          <div class="box">
+                              <div class="box-content">
+                                <table class="table table-striped">
+                                  <tbody><tr>
+                                    <td>Body Type / Category:</td>
+                                    <td>	
+                                      <select name="body-type" id="bodyType">
+                                        <option value="">Body Type (Any)</option>
+                                        <option value="W">Camper</option>
+                                        <option value="V">Car Derived Van</option>
+                                        <option value="N">Convertible</option>
+                                        <option value="C">Coupe</option>
+                                        <option value="E">Estate </option>
+                                        <option value="F">4 x 4</option>
+                                        <option value="H" selected="">Hatchback</option>
+                                        <option value="M">MPV</option>
+                                        <option value="A">Panel Van</option>
+                                        <option value="P">Pick-Up</option>
+                                        <option value="S">Saloon</option>
+                                        <option value="U">SUV</option>
+                                      </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Fuel Type:</td>
+                                      <td>	
+                                        <select name="fuel-type" id="fuelType">
+                                          <option value="">Fuel Type (Any)</option>
+                                          <option value="P">Petrol</option>
+                                          <option value="D" selected="">Diesel</option>
+                                          <option value="H">Hybrid</option>
+                                          <option value="E">Electric</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                    <td>Transmission:</td>
+                                    <td>	
+                                      <select name="transmission" id="transmission">
+                                        <option value="">Transmission (Any)</option>
+                                        <option value="M">Manual</option>
+                                        <option value="A" selected="">Automatic</option>
+                                        <option value="S">Semi-Automatic</option>
+                                        <option value="C">CVT</option>
+                                      </select>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Litres: </td>
+                                      <td>
+                                        <input id="engineLitres" type="text" maxlength="70" value="2.0" style="text-align: left;" >
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Mileage: </td>
+                                      <td>
+                                      <input id="mileage" type="text" maxlength="70" value="0" style="text-align: left;" >
+                                    </tr>
+                                    <tr>
+                                        <td>Location:</td>
+                                        <td>
+                                          <select id="storeID" name="storeID" class="ctrlItem" >
+                                            <option value="1" selected="">1 - Peterborough</option>
+                                          </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Status: </td>
+                                      <td>
+                                        <!-- SELECT * FROM a0_common.names WHERE type='motorStatus' AND status='N' AND code!='T' ORDER BY screenSeq -->
+                                        <select id="status" >
+                                          <option value="D">Due In</option>
+                                          <option value="N" selected="">For Sale</option>
+                                          <option value="P">Prestige</option>
+                                          <option value="R">Reserved</option>
+                                          <option value="C">Clearance</option>
+                                          <option value="S">Sold</option>
+                                          <option value="X">Deleted</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>Featured:</td>
+                                      <td>
+                                        <select id="featured" >
+                                          <option value="Y">Yes</option>
+                                          <option value="N" selected="">No</option>
+                                        </select>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>VED (12 months) [Beta]</td>
+                                      <td>280.00</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                            </div><!--box-content-->
+                          </div><!--box-->
+                          <div class="right">
+                              <a tabindex="0" class="btn btn-lg btn-blue" href="#" ><i class="icon-angle-left"></i> Cancel</a>
+                              <a tabindex="0" class="btn btn-lg btn-red" href="#" ><i class="icon-check"></i> Save</a>
+                          </div>
+                        </div><!--col-->
+                      </div><!--row-->
+                      <!-- <script>document.getElementById('lockStatus').innerHTML = 'Released';</script> -->
+                    </div><!-- BasicPanel .tab-pane ends -->
+                    <!-- PricingPanel tab-panel starts -->
+                    <div class="tab-pane" id="PricingPanel">
+                      <div class="spinner"><i class="fa fa-cog fa-spin  fa-3x"></i></div>
+                      <div class="row">
+                        <!--col satrts-->
+                        <div class="col-md-6">
+                          <!--box starts-->
+                          <div class="box">
+                            <!--box-content starts-->
+                            <div class="box-content">
+                              <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <td>Price: </td>
+                                    <td>
+                                      <input id="price" type="text" maxlength="70" value="0.00" style="text-align: left;" onchange="setEditFlag('showPricingData')">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Was Price: </td>
+                                    <td>
+                                      <input id="wasPrice" type="text" maxlength="70" value="0.00" style="text-align: left;" onchange="setEditFlag('showPricingData')">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>VAT Code: </td>
+                                    <td>
+                                        <input id="vatCode" type="text" size="1" maxlength="1" value="P" onfocus="preValidateSave(this.value)" onblur="populateVatCodeName(this.value, 'vatName')" onchange="setEditFlag('showPricingData')">
+                                        <!-- (<span id="vatName">  
+                                        </span> ) -->
+                                        <!-- <script>populateVatCodeName('P', 'vatName')</script> -->
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div><!--box-content ends-->
+                          </div><!--box ends-->
+                          <div class="right">
+                              <a tabindex="0" class="btn btn-lg btn-blue" href="#" onclick="exit('01000010');"><i class="icon-angle-left"></i> Cancel</a>
+                              <a tabindex="0" class="btn btn-lg btn-red" href="#" onclick="savePricingData('U2741')"><i class="icon-check"></i> Save</a>
+                          </div>
+                        </div><!--col ends-->
+                      </div>
+                    </div><!-- PricingPanel tab-panel ends -->
+
+                    <!-- ImagePannel .tab-pane starts -->
+                    <div class="tab-pane" id="ImagePanel">
+                      <div class="spinner"><i class="fa fa-cog fa-spin  fa-3x"></i></div>
+                      <div class="row imagepanel">
+                        <div class="col-md-12">
+                          <!--box starts-->
+                          <div class="box">
+                            <!-- box-header starts -->
+                            <div class="box-header">
+                              <div class="title bolder2">
+                                Images: 
+                                0 on file
+                              </div>
+                            </div><!-- box-header ends -->
+                            <!-- .box-content starts -->
+                            <div class="box-content">
+                              <ul class="tagsinput ui-sortable">
+                                <li class="tag ui-sortable-handle" style="padding: 0px 5px;">There are currently no images for this vehicle</li>
+                              </ul>
+                              
+                              <script>
+                                /*
+                                  $(function() {
+      
+                                      var start_index = '' ;
+                                      var end_index = '' ;
+                                      var sku = $("#sku").val();
+      
+                                      $(".tagsinput" ).sortable({
+                                          containment: "parent" ,
+                                          cursor: 'move',
+                                          connectWith: ".tagsinput",
+                                          tolerance: "pointer",
+      
+                                          start: function( event, ui ) {
+                                              console.log("start position: " + ui.item.index())
+                                              start_index=ui.item.index();
+      
+                                              //alert("start position: " + ui.item.index());
+                                          },
+                                          update: function( event, ui ) {
+                                              //debugger
+                                              //alert("New position: " + ui.item.index());
+                                              console.log("end position: " + ui.item.index())
+                                              end_index=ui.item.index();
+                                              //call function change
+      
+                                              var temp=[];
+                                              $.map($(this).find('li'), function(el) {
+                                                  //   console.log(el)
+                                                  var obj=$(el).find('a').attr('id')
+                                                  temp.push(obj)
+                                                  //console.log($(el).find('a').attr('id') + ' = ' + $(el).index());
+                                              })
+                                              //console.log('temp')
+                                              //console.log(temp)
+                                              var option_id = temp[end_index];
+                                              changeImgPos(sku, start_index, end_index);
+                                              //change(option_id ,start_index,end_index);
+                                              start_index = '' ;
+                                              end_index = '' ;
+                                          }
+      
+                                      });
+      
+                                      $( ".tagsinput" ).disableSelection();
+                                  } );
+                                  $(document).on('click', '#close-preview', function(){
+                                      $('.image-preview').popover('hide');
+                                      // Hover befor close the preview
+                                      $('.image-preview').hover(
+                                          function () {
+                                              $('.image-preview').popover('show');
+                                          },
+                                          function () {
+                                              $('.image-preview').popover('hide');
+                                          }
+                                      );
+                                  });
+                                  $(function() {
+                                      // Create the close button
+                                      var closebtn = $('<button/>', {
+                                          type:"button",
+                                          text: 'x',
+                                          id: 'close-preview',
+                                          style: 'font-size: initial;',
+                                      });
+                                      closebtn.attr("class","close pull-right");
+                                      // Set the popover default content
+                                      $('.image-preview').popover({
+                                          trigger:'manual',
+                                          html:true,
+                                          title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+                                          content: "There's no image",
+                                          placement:'bottom'
+                                      });
+                                      // Clear event
+                                      $('.image-preview-clear').click(function(){
+                                          $('.image-preview').attr("data-content","").popover('hide');
+                                          $('.image-preview-filename').val("");
+                                          $('.image-preview-clear').hide();
+                                          $('.image-preview-input input:file').val("");
+                                          $(".image-preview-input-title").text("Browse");
+                                      });
+                                      // Create the preview image
+                                      $(".image-preview-input input:file").change(function (){
+                                          var img = $('<img/>', {
+                                              id: 'dynamic',
+                                              width:250,
+                                              height:200
+                                          });
+                                          var file = this.files[0];
+                                          var reader = new FileReader();
+                                          // Set preview image into the popover data-content
+                                          reader.onload = function (e) {
+                                              // $(".image-preview-input-title").text("Change");
+                                              $(".image-preview-clear").show();
+                                            //  $(".image-preview-filename").val(file.name);
+                                              //img.attr('src', e.target.result);
+                                              //$(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+                                          }
+                                          //get the input and UL list
+                                          var input = document.getElementById('filesToUpload');
+                                          var list = document.getElementById('show-all-files-cont');
+                                          /*
+                                          for (var x = 0; x < input.files.length; x++) {
+      
+                                              $(".image-preview-input-title").text("Change");
+                                              $(".image-preview-filename").val(x+" Files Added")
+                                          }
+                                          */
+                                          /*$(".image-preview-filename").val(input.files.length+" File(s) Added")
+                                          reader.readAsDataURL(file);
+                                      });
+                                  });
+                                  */
+                              </script>
+                            </div><!--box-content-->
+                          </div><!--box ends-->
+                          <!--box starts-->
+                          <div class="box">
+                            <!--box-content starts-->
+                            <div class="box-content" style="margin-bottom:15px">
+                              <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <th class="boxHead">360 Image</th>
+                                  </tr>
+                                  <tr>
+                                    <td>                                           No 360 image exists for this vehicle
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div><!--box-content starts-->
+                          </div><!--box ends-->
+                          <!--box starts-->
+                          <div class="box add-image">
+                            <!-- form starts -->
+                            <form enctype="multipart/form-data" method="post" action="?page=vehicle-maint&amp;sku=U2741&amp;tab=Image&amp;mode=edit" style="margin:0; padding:0;">
+                              <!--row starts-->
+                              <div class="row">
+                                <!-- .col starts -->
+                                <div class="col-md-6">
+                                  <p><b>Add an Image:</b></p>
+                                  <div class="d-flex">
+                                    <div class="imageuploadwrap">
+                                      <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+                                      <input type="hidden" name="page" value="stk-image-maint">
+                                      <div class="input-group image-preview" data-original-title="" title="">
+                                        <div id="show-all-files-cont">
+                                            <input type="text" class="form-control image-preview-filename" id="show-all-files" style="height:30px;" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                                        </div>
+                                        <div class="input-group-btn">
+                                          <!-- image-preview-clear button -->
+                                          <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                            <span class="glyphicons glyphicons-remove"></span> Clear
+                                          </button>
+                                          <!-- image-preview-input -->
+                                          <div class="btn btn-default image-preview-input">
+                                            <i class="mdi mdi-folder-open"></i>
+                                            <span class="image-preview-input-title">Browse</span>
+                                            <input type="file" accept="image/png, image/jpeg, image/gif" id="filesToUpload" name="userfile[]" multiple=""> <!-- rename it -->
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div><!-- imageuploadwrap ends -->
+                                    <div class="upload-btn">
+                                      <input type="submit" class="btn btn-info" value="Upload File">
+                                    </div><!-- upload-btn ends -->
+                                  </div>
+                                </div><!-- .col ends -->
+                                <!-- .col starts -->
+                                <div class="col-md-6">
+                                  <div class="alert alert-info">
+                                    You can upload multiple images and one 360 photo
+                                  </div>
+                                </div><!-- .col ends -->
+                              </div><!--row ends-->
+                            </form><!-- form ends -->
+                          </div><!--box ends-->
+                          <!--box starts-->
+                          <div class="box addurl">
+                            <form enctype="multipart/form-data" method="post" action="?page=vehicle-maint&amp;sku=U2741&amp;tab=Image&amp;mode=edit" style="margin:0; padding:0;">
+                              <!--row starts-->
+                              <div class="row">
+                                <!--col starts--->
+                                <div class="col-xl-4 col-lg-3 col-md-3 urltext1">
+                                    <p><b>Add a Video URL:</b></p>
+                                    <input type="text" id="videoUrl" style="width:100%;" value="">
+                                </div>
+                                <div class="col-xl-2 col-lg-2 col-md-2 urlbtn1">
+                                  <input type="button" class="btn btn-info urlbtn" value="Save Video URL" onclick="saveVideoUrl()">
+                                  <span id="videoUrlSaved"></span>
+                                </div>
+                                <div class="col-xl-6 col-lg-7 col-md-7">
+                                  <div class="alert alert-info">
+                                    <p>You can define one video URL</p>
+                                    <p>It must be submitted in YouTube's 'embed' format, e.g.: http://www.youtube.com/embed/HHkdprQ6Ruo?wmode=transparent</p>
+                                  </div>
+                                </div><!--col ends--->
+                              </div><!--row ends-->
+                            </form>
+                          </div><!-- box ends -->				
+                        </div><!--col-->
+                      </div>
+                    </div><!-- ImagePannel .tab-pane ends -->
+
+                    <!-- DescPanel tab-pane starts -->
+                    <div class="tab-pane" id="DescPanel">
+
+                      <div class="spinner"><i class="fa fa-cog fa-spin  fa-3x"></i></div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <!--box starts-->
+                          <!-- box starts -->
+                          <div class="box">
+                            <!--box-content starts-->
+                            <div class="box-content descpanel">
+                              <table class="table table-striped">
+                                <tbody>
+                                  <tr>
+                                    <td>Title: </td>
+                                    <td>
+                                      <input id="title" type="text" maxlength="70" value="Ford Mondeo Titanium 130 2 Diesel Automatic 5dr Hatchback" style="text-align: left;" onchange="setEditFlag('showDescData')">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Headline: </td>
+                                    <td>
+                                      <input id="headline" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showDescData')">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Intro Text: </td>
+                                    <td>
+                                      <textarea id="description2" spellcheck="false"></textarea>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Upgrades: </td>
+                                    <td>
+                                      <textarea id="upgrades" spellcheck="false"></textarea>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Options: </td>
+                                    <td>
+                                      <textarea id="description3" spellcheck="false"></textarea>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>Closing Text: </td>
+                                    <td>
+                                      <textarea id="description4" spellcheck="false"></textarea>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div><!--box-content ends-->
+                          </div><!--box ends-->
+                          <div class="right float-right">
+                              <a tabindex="0" class="btn btn-lg btn-blue" href="#" onclick="exit('01000010');"><i class="icon-angle-left"></i> Cancel</a>
+                              <a tabindex="0" class="btn btn-lg btn-red" href="#" onclick="saveDescData('U2741')"><i class="icon-check"></i> Save</a>
+                          </div>
+                        </div><!--col-->
+                      </div>
+                    </div><!-- DescPanel tab-pane ends -->
+
+                    <!-- .tab-pane starts -->
+                    <div class="tab-pane" id="TechPanel">
+                      <!-- .row starts -->
+                      <div class="row technical">
+
+                          <!-- col starts -->
+                          <div class="col-xl-4 col-lg-6 col-md-6 order2">
+                            <!-- .box starts -->
+                            <div class="box">
+                                <!-- .box-header starts -->
+                                <div class="box-header">
+                                    <div class="title bolder2">Sizes &amp; Capacities</div>
+                                </div><!-- .box-header ends -->
+                                <!-- .box-content starts -->
+                                <div class="box-content">
+                                    <table class="table table-striped">
+                                        <tbody>
+                                          <tr>
+                                            <td>Length: </td>
+                                            <td>
+                                                <input id="length" type="text" maxlength="70" value="4778" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Width: </td>
+                                            <td>
+                                                <input id="width" type="text" maxlength="70" value="2078" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Height: </td>
+                                            <td>
+                                                <input id="height" type="text" maxlength="70" value="1451" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wheelbase: </td>
+                                            <td>
+                                                <input id="wheelbase" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tyre Size Front: </td>
+                                            <td>
+                                                <input id="tyreSizeFront" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tyre Size Rear: </td>
+                                            <td>
+                                                <input id="tyreSizeRear" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tyre Size Spare: </td>
+                                            <td>
+                                                <input id="tyreSizeSpare" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wheel Type: </td>
+                                            <td>
+                                                <input id="wheelType" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tank Capacity: </td>
+                                            <td>
+                                                <input id="tankCapacity" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>GVW: </td>
+                                            <td>
+                                                <input id="gvw" type="text" maxlength="70" value="0" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Luggage Capacity<br/> (Seats Down): </td>
+                                            <td>
+                                                <input id="luggageCapSd" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Luggage Capacity<br/> (Seats Up): </td>
+                                            <td>
+                                                <input id="luggageCapSu" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Max Load Weight: </td>
+                                            <td>
+                                                <input id="maxLoadWeight" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Max Roof Load: </td>
+                                            <td>
+                                                <input id="maxRoofLoad" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Max Towing Weight<br/> Braked: </td>
+                                            <td>
+                                                <input id="maxTowingWeightBraked" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Max Towing Weight<br/> Unbraked: </td>
+                                            <td>
+                                                <input id="maxTowingWeightUnbraked" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Min Kerb Weight: </td>
+                                            <td>
+                                                <input id="minKerbWeight" type="text" maxlength="70" value="1559" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </div><!--box-content ends-->
+                            </div><!--box ends-->
+                            <div class="right">
+                                <a tabindex="0" class="btn btn-lg btn-blue" href="#" onclick="exit('01000010');"><i class="icon-angle-left"></i> Cancel</a>
+                                <a tabindex="0" class="btn btn-lg btn-red" href="#" onclick="saveSizeData('U2741')"><i class="icon-check"></i> Save</a>
+                            </div>
+                          </div><!-- .col ends -->
+                          
+                          <!-- .col starts -->
+                          <div class="col-xl-4 col-lg-6 col-md-6 order1">
+                            <div class="box">
+                                <!-- .box-header starts -->
+                                <div class="box-header">
+                                    <div class="title bolder2">Performance</div>
+                                </div><!-- .box-header ends -->
+                                <!-- .box-content starts -->
+                                <div class="box-content">
+                                    <table class="table table-striped">
+                                        <tbody><tr>
+                                            <td>BHP: </td>
+                                            <td>
+                                                <input id="bhp" type="text" maxlength="70" value="130" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kw: </td>
+                                            <td>
+                                                <input id="kw" type="text" maxlength="70" value="97" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Acceleration: </td>
+                                            <td>
+                                                <input id="acceleration" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Max Mph: </td>
+                                            <td>
+                                                <input id="maxMph" type="text" maxlength="70" value="124" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of Gears: </td>
+                                            <td>
+                                                <input id="numGears" type="text" maxlength="70" value="6" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of Cylinders: </td>
+                                            <td>
+                                                <input id="numCylinders" type="text" maxlength="70" value="4" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of Valves: </td>
+                                            <td>
+                                                <input id="numValves" type="text" maxlength="70" value="4" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cam Shaft: </td>
+                                            <td>
+                                                <input id="camShaft" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Catalytic Converter: </td>
+                                            <td>
+                                                <input id="catalyticConv" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Engine Layout: </td>
+                                            <td>
+                                                <input id="engineLayout" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Engine CCs: </td>
+                                            <td>
+                                                <input id="engineCcs" type="text" maxlength="70" value="1997" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fuel Delivery: </td>
+                                            <td>
+                                                <input id="fuelDelivery" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cylinder Layout: </td>
+                                            <td>
+                                                <input id="cylinderLayout" type="text" maxlength="70" value="INLINE" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                        </tr>
+                                    </tbody>
+                                  </table>
+                                </div><!--box-content ends-->
+                            </div><!--box ends-->
+                          </div><!-- .col ends -->
+
+                          <!-- .col starts -->
+                          <div class="col-xl-4 col-lg-6 col-md-6 mdoffset order0">
+                              <!-- .box starts -->
+                              <div class="box">
+                                  <!-- .box-header starts -->
+                                  <div class="box-header">
+                                      <div class="title bolder2">Efficiency &amp; Emmissions</div>
+                                  </div><!-- .box-header ends -->
+                                  <!-- .box-content start -->
+                                  <div class="box-content">
+                                      <table class="table table-striped">
+                                          <tbody>
+                                            <tr>
+                                              <td>Std Euro Emissions: </td>
+                                              <td>
+                                                  <input id="stdEuroEmissions" type="text" maxlength="70" value="4" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>CO2: </td>
+                                              <td>
+                                                  <input id="co2" type="text" maxlength="70" value="189" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>HC: </td>
+                                              <td>
+                                                  <input id="hc" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>Urban Mpg: </td>
+                                              <td>
+                                                  <input id="urbanMpg" type="text" maxlength="70" value="28.8" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>Extra Urban Mpg: </td>
+                                              <td>
+                                                  <input id="xUrbanMpg" type="text" maxlength="70" value="50.4" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>Combi Mpg: </td>
+                                              <td>
+                                                  <input id="combiMpg" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                          </tr>
+                                      </tbody>
+                                    </table>
+                                  </div><!--box-content-->
+                              </div><!--box-->
+                              <!-- .box starts -->
+                              <div class="box">
+                                  <!-- .box-header starts -->
+                                  <div class="box-header">
+                                      <div class="title bolder2">Other Data</div>
+                                  </div><!-- .box-header ends -->
+                                  <!-- .box-content starts -->
+                                  <div class="box-content">
+                                      <table class="table table-striped">
+                                          <tbody><tr>
+                                              <td>Insurance Group: </td>
+                                              <td>
+                                                  <input id="insuranceGroup" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>Corrosion Warranty: </td>
+                                              <td>
+                                                  <input id="corrosionWarranty" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>Paint Warranty: </td>
+                                              <td>
+                                                  <input id="PaintWarranty" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                              </td>
+                                          </tr>
+                                          <tr>
+                                              <td>Special Edition: </td>
+                                              <td>
+                                                  <input id="specialEdition" type="text" maxlength="70" value="" style="text-align: left;" onchange="setEditFlag('showTechData')">
+                                               </td>
+                                          </tr>
+                                      </tbody></table>
+                                  </div><!--box-content ends-->
+                              </div><!--box ends-->
+                          </div><!--col ends-->
+
+                      </div><!-- .row ends -->
+
+                    </div>
+                    <!-- .tab-pane ends -->
+
+                    <!-- .tab-pane starts -->
+                    <!-- <div class="tab-pane" id="StdEquipPanel">
+                      <div class="spinner"><i class="fa fa-cog fa-spin  fa-3x"></i></div>
+                      <p>Lorem ipsumus. Impedit aut voluptatem porro in magni nihil velit odio quod.</p>
+                    </div> -->
+                    <!-- .tab-pane ends -->
+                    <!-- .tab-pane starts -->
+                    <!-- <div class="tab-pane" id="MotorhomePanel">
+                      <div class="spinner"><i class="fa fa-cog fa-spin  fa-3x"></i></div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, possimus. Impedit aut voluptatem porro in magni nihil velit odio quod.</p>
+                    </div> -->
+                    <!-- .tab-pane ends -->
+
+                    <!-- LogsPanel .tab-pane starts -->
+                    <div class="tab-pane" id="LogsPanel">
+                      <div class="spinner"><i class="fa fa-cog fa-spin  fa-3x"></i></div>
+                      
+                      <!-- .row starts -->
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="box">
+                                  <!--box-content starts -->
+                                  <div class="box-content">
+                                      <div class="table-responsive">
+                                          <table class="table table-striped">
+                                              <tbody>
+                                                <tr>
+                                                  <th>Timestamp</th>
+                                                  <th>Event</th>
+                                                  <th>Narrative</th>
+                                                  <th>User</th>
+                                                </tr>
+                                                <tr>
+                                                    <td class="row0">14/06/2018</td>
+                                                    <td class="row0">Motor Record Created</td>
+                                                    <td class="row0">AG08FUV created from Registration Lookup</td>
+                                                    <td class="row0">2 (admin)</td>
+                                                </tr>
+                                              </tbody>
+                                          </table>
+                                      </div>
+                                  </div><!--box-content ends -->
+                              </div><!--box ends-->
+                          </div><!--col ends-->
+                      </div><!--row ends-->
+
+                    </div><!-- LogsPanel .tab-pane ends -->
+
+                  </div><!-- .tab-conten ends -->
+                </div><!-- .box-content ends -->
+              </div><!--box ends-->	
+            </div><!-- .col ends -->
+          </div>
+          <!-- tabs row ends -->
+        </div>
+        <!-- .content-wrappe ends -->
+
+        <!-- .footer starts -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright &copy; 2018 <a href="#" target="_blank">AutoHQ</a>. All rights reserved.</span>
+            <!-- copyright-text ends -->
+            <span class="footerlogo float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+              <a href="#"><img src="img/logo.png" alt=""></a>
+            </span><!-- footer-logo ends -->
+          </div>
+        </footer>
+        <!-- .footer ends -->
+      </div>
+      <!-- .main-panel ends -->
+    </div>
+  </div>
+
+  <!--Libraries-->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/perfect-scrollbar.jquery.min.js"></script>
+
+  <!--Active & Custom JS-->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

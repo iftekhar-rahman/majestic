@@ -1,0 +1,23 @@
+/*=========update-message css=============*/ 
+
+.update-message{
+    @extend %posfixed;
+    height: 40px;
+    top: -40px;
+    left: 0;
+    z-index: 99999;
+    background-color: $update-message-bg-color;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    &.show-alert {
+        top: 0;
+    }
+}
+
+
+.site-wrapper.show-alert {
+    padding-top: 40px;
+}
+.dash-header.show-alert {
+    margin-top: 40px;
+}

@@ -1,0 +1,38 @@
+/*================.accordion-css===================*/ 
+.accordion-wrapper .card .card-body {
+    min-height: 300px;
+}
+.accordion.accordion-wrapper > .card .card-header button {
+    width: 100%;
+    text-align: left;
+    justify-content: flex-start;
+    height: 50px;
+}
+.accordion.accordion-wrapper > .card .card-header button, .accordion > .card .card-header button h2 {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0px 20px;
+}
+.accordion-wrapper .card .card-body {
+    padding: 24px 20px;
+}
+.accordion-wrapper label {
+    /* width: 170px; */
+    display: block;
+    margin-bottom: 3px;
+}
+.accordion-wrapper input, .accordion-wrapper textarea {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.accordion-wrapper input {
+    height: 40px;
+}
+.accordion-wrapper .nice-select {
+    margin-bottom: 15px;
+    height: 40px;
+    line-height: 40px;
+}
+.accordion-wrapper .card-header {
+    padding: 0;
+}

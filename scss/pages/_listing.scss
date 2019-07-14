@@ -1,0 +1,180 @@
+/*===============.listing-css===================*/ 
+
+// Days Colors
+// .red{color: red;}
+// .amber{color: orange;}
+// .green{color: green;}
+
+
+// .statusLinks
+.statusLinks {
+    border: 1px solid #e3e3e3;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    width: max-content;
+    @include all-below-med{
+        width: 100%;
+    }
+    span {
+        margin: 0 3px;
+        @include mx-desktops{
+            margin: 0 1px;
+        }
+    }
+    a {
+        @extend %primary-color;
+    }
+}
+// .pagination
+.pagination {
+    margin-bottom: 10px;
+    @include all-below-med{
+        float: left !important;
+    }
+    li{
+        a {
+            border: 1px solid #e3e3e3;
+            padding: 5px 0px;
+            @extend %white-bg-color;
+            @extend %displayblock;
+            @extend %textcenter;
+            @extend %black-color;
+            margin-left: 2px;
+            width: 35px;
+            height: 35px;
+            line-height: 24px;
+            font-weight: 500;
+            -webkit-transition: .3s;
+            transition: .3s;
+            i {
+                font-size: 22px;
+            }
+        }
+        &:hover a {
+            @extend %primary-bg-color;
+            @extend %white-color;
+            border-color: $primary-color;
+        }
+    }
+}
+
+
+.box-content .table thead th {
+    padding: 10px;
+}
+
+.box {
+    background: #fbfbfb;
+    margin-bottom: 20px;
+}
+.box .box-header, .box .box-footer {
+    zoom: 1;
+    background: #eaeaea;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdfdfd), color-stop(100%, #eaeaea));
+    background-image: -webkit-linear-gradient(top, #fdfdfd, #eaeaea);
+    background-image: -moz-linear-gradient(top, #fdfdfd, #eaeaea);
+    background-image: -o-linear-gradient(top, #fdfdfd, #eaeaea);
+    background-image: linear-gradient(top, #fdfdfd, #eaeaea);
+    color: #636363;
+    border: 1px solid #e3e3e3;
+}
+
+// .box-toolbar 
+.box-header {
+    .title {
+        padding: 7px 10px 3px;
+    }
+}
+.box-toolbar {
+    .toolbar-link a {
+        border-left: 1px solid #e3e3ee;
+        padding: 6px 12px 4px 30px;
+        @extend %displayblock;
+        font-weight: normal;
+        color: #636363;
+        @extend %posrelative;
+        font-size: 12px;
+        &:hover{
+            @extend %primary-color;
+        }
+        i {
+            font-size: 14px;
+            @extend %posabsolute;
+            left: 12px;
+            top: 6px;
+        }
+    }
+}
+.box-content .table thead th.descCol {
+    width: 15%;
+    min-width: 125px;
+}
+.box-content .table thead th.ageCol {
+    width: 15%;
+    min-width: 101px;
+}
+.box-content .table thead th a:hover {
+    @extend %primary-color;
+}
+
+table.table.vehicleBrowse {
+    border-top: 1px solid #e3e3ee;
+}
+.vehicleBrowse tbody tr td h3 {
+    font-size: 18px;
+    margin: 0;
+}
+.vehicleBrowse tbody tr td {
+    padding: 8px;
+    line-height: 1.42857;
+}
+table.vehicleBrowse .reg {
+    border: 1px solid #e3e3ee;
+    @extend %white-bg-color;
+    padding: 3px 8px 1px 8px;
+    width: fit-content;
+    @extend %borderradius5;
+    font-family: 'charles_wright_bold_capsRg';
+}
+table.vehicleBrowse td.days90l {
+    border-left: 4px solid $primary-color;
+}
+table.vehicleBrowse td.days90r {
+    border-right: 4px solid $primary-color;
+}
+table.vehicleBrowse td.picCol {
+    width: 100px;
+    padding: 0;
+    img{
+        max-width: 100px;
+    }
+}
+table.vehicleBrowse .btn {
+    min-width: 40px;
+    margin: 0 2px 2px 0;
+    padding: 0;
+    height: 30px;
+    i{
+        @extend %white-color;
+    }
+}
+table.vehicleBrowse .btn.action-btn-1 {
+    background-color: $action-btn-1;
+}
+table.vehicleBrowse .btn.action-btn-2 {
+    background-color: $action-btn-2;
+}
+table.vehicleBrowse .btn.action-btn-3 {
+    background-color: $action-btn-3;
+}
+table.vehicleBrowse td .dataAlert {
+    font-size: 12px;
+    padding: 2px 4px;
+    @extend %w100;
+    @extend %primary-bg-color;
+    @extend %white-color;
+    font-weight: bold;
+}
+
+
+

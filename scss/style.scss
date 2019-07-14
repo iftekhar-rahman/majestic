@@ -1,0 +1,40 @@
+// ======================================
+//  Partial Imports
+// ======================================
+
+// Utilities
+@import 'helpers/helper';
+@import 'helpers/variables';
+@import 'helpers/mediaquery';
+@import 'helpers/mixins';
+
+// Base fonts
+@import 'base/fonts';
+
+// Base Styles
+@import 'base/reset';
+@import 'base/common';
+
+// Layout Styles
+@import 'components/header';
+@import 'components/footer';
+
+// Components Styles
+@import 'components/animations';
+@import 'components/colors';
+@import 'components/header';
+@import 'components/sidemenu';
+@import 'components/buttons';
+@import 'components/alerts';
+@import 'components/update-message';
+@import 'components/table';
+@import 'components/cards';
+
+
+// Pages Styles
+@import 'pages/dashboard';
+@import 'pages/listing';
+@import 'pages/edit-vehicle';
+@import 'pages/login';
+@import 'pages/accordion';
+@import 'layout';

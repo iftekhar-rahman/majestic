@@ -1,0 +1,338 @@
+/*=========.edit-vehicles============*/ 
+
+// .edit-vehicle-header
+.edit-vehicle-header{
+    .box-header{
+        @include mx-mobile-xs{
+            display: block !important;
+        }
+        @include mx-mobile{
+            display: block !important;
+        }
+        .toolbar-link a {
+            @include mx-mobile-xs{
+                border-left: 0;
+                border-right: 1px solid #e3e3ee;
+            }
+            @include mx-mobile{
+                border-left: 0;
+                border-right: 1px solid #e3e3ee;
+            }
+        }
+        .title{
+            @include mx-mobile-xs{
+                border-bottom: 1px solid #e3e3ee;
+            }
+            @include mx-mobile{
+                border-bottom: 1px solid #e3e3ee;
+            }
+        }
+    }
+}
+
+// .tab-wrapper
+.tab-wrapper {
+    border: 1px solid #e3e3e3;
+    .tab-content-wrap {
+        padding: 15px;
+        background-color: #FBFBFB;
+    }
+    .nav-tabs {
+        a {
+            padding: 8px 15px;
+            @extend %black-color;
+            @include mx-mobile-xs{
+                padding: 8px 12px;
+            }
+            &.active {
+                @extend %primary-color;
+                @extend %posrelative;
+                background-color: #FBFBFB;
+                border-top: 0;
+                &:after {
+                    @extend %pseudo;
+                    left: 0;
+                    bottom: -1px;
+                    @extend %w100;
+                    height: 1px;
+                    background-color: #FBFBFB;
+                }
+            }
+        }
+    }
+}
+
+
+
+// .tab-content-wrap
+.tab-content-wrap{
+    .table tbody tr td {
+        padding: 8px;
+        vertical-align: middle;
+        height: 47px;
+    }
+    .descpanel textarea {
+        height: 120px;
+        .table tbody tr td {
+            vertical-align: top;
+        }
+    }
+    .technical {
+        .box-content td {
+            line-height: 20px;
+        }
+        @include all-below-mobile-lg{
+            .order2{
+                order: 2;
+            }
+            .order1{
+                order: 1;
+            }
+            .order0{
+                order: 0;
+            }
+        }
+        @include mx-tablet{
+            .mdoffset {
+                margin-top: -268px;
+                margin-left: 50%;
+            }
+        }
+        @include mx-desktops{
+            .mdoffset {
+                margin-top: -268px;
+                margin-left: 50%;
+            }
+        }
+        
+    }
+    .box-header .title.bolder2 {
+        padding: 5px 10px 5px;
+        font-size: 1.1em;
+    }
+    .box-link .toolbar-link a {
+        font-weight: normal;
+        font-size: 12px;
+    }
+    .box-link .toolbar-link a i {
+        font-size: 15px;
+        top: 5px;
+        left: 10px;
+    }
+    .table th {
+        padding: 8px 12px;
+        border: 1px solid #e3e3e3;
+    }
+    .tagsinput {
+        background: #e6ffef;
+        padding: 5px;
+        @extend %w100;
+        overflow-y: auto;
+        li.tag {
+            @extend %displayblock;
+            float: left;
+            padding: 0;
+            margin: 5px;
+            line-height: 23px;
+            border: 1px solid #e3e3e3;
+            background: #f2f2f2;
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…dpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==);
+            background-size: 100%;
+            background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#fcfcfc),color-stop(100%,#f2f2f2));
+            background-image: -webkit-linear-gradient(top,#fcfcfc,#f2f2f2);
+            background-image: -moz-linear-gradient(top,#fcfcfc,#f2f2f2);
+            background-image: -o-linear-gradient(top,#fcfcfc,#f2f2f2);
+            background-image: linear-gradient(top,#fcfcfc,#f2f2f2);
+        }
+    }
+}
+
+.input-group {
+    @extend %posrelative;
+    @extend %dtable;
+    border-collapse: separate;
+    height: 36px;
+    line-height: 36px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    @extend %w100;
+    z-index: 1;
+    .form-control {
+        @extend %w100;
+        margin-bottom: 0;
+    }
+    &.image-preview{
+        .input-group-btn{
+            width: 85px;
+        }
+    }
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+    @extend %dtablecell;
+}
+
+
+// upload files
+input[type=file] {
+    @extend %displayblock; 
+}
+.image-preview-input input[type=file] {
+    @extend %posabsolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    @extend %cursorpointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    height: 30px;
+}
+.input-group-btn > .btn {
+    @extend %posrelative;
+}
+.imageuploadwrap {
+    flex-basis: 67%;
+    margin-right: 30px;
+    @include all-below-mobile-lg{
+        flex-basis: 85%;
+        margin-right: 10px;
+    }
+    @include mx-tablet{
+        margin-right: 15px;
+    }
+    @include mx-desktops{
+        flex-basis: 70%;
+        margin-right: 15px;
+    }
+    input#filesToUpload {
+        width: 85px;
+    }
+    input#show-all-files {
+        cursor: not-allowed;
+    }
+    .btn.btn-default {
+        padding: 0 5px;
+        min-width: 85px;
+        font-size: 12px;
+        height: 30px;
+        margin-top: -2px;
+        @extend %black-color;
+        border: 1px solid #e3e3e3;
+        -webkit-box-shadow: inset 0 1px 2px white;
+        -moz-box-shadow: inset 0 1px 2px white;
+        box-shadow: inset 0 1px 2px white;
+        background: #e9e9e9;
+        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiP…dpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==);
+        background-size: 100%;
+        background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdfdfd), color-stop(100%, #e9e9e9));
+        background-image: -webkit-linear-gradient(top, #fdfdfd, #e9e9e9);
+        background-image: -moz-linear-gradient(top, #fdfdfd, #e9e9e9);
+        background-image: -o-linear-gradient(top, #fdfdfd, #e9e9e9);
+        background-image: linear-gradient(top, #fdfdfd, #e9e9e9);
+        .input-group-btn{
+            width: 85px;
+        }
+        .image-preview-input-title {
+            margin-left: 3px;
+        }
+        &.image-preview-clear{
+            min-width: 70px;
+            @extend %posabsolute;
+            right: 87px;
+            top: 4px;
+            @include mx-desktops{
+                min-width: 50px;
+            }
+        }
+        &:active {
+            background: #f3f3f3;
+            border-color: #e3e3e3;
+            -webkit-box-shadow: 0 0 5px #f3f3f3 inset;
+            -moz-box-shadow: 0 0 5px #f3f3f3 inset;
+            box-shadow: 0 0 5px #f3f3f3 inset;
+        }
+    }
+}
+// .imageuploadwrap 
+.input-group-btn > .btn + .btn {
+    margin-left: -4px;
+}
+.input-group-btn:last-child > .btn {
+    margin-left: -1px;
+}
+
+// .upload-btn
+.upload-btn {
+    flex-basis: 30%;
+    margin-top: 2px;
+    @include all-below-mobile-lg{
+        flex-basis: 15%
+    }
+    .btn{
+        height: 30px;
+        min-width: 85px;
+        padding: 0;
+        font-size: 12px;
+    }
+}
+.box.add-image, .box.addurl {
+    padding: 20px;
+    @include all-below-mobile-lg{
+        padding: 10px;
+    }
+}
+.box .alert {
+    margin-top: 20px;
+    @extend %borderradius0;
+    @include all-below-mobile-lg{
+        overflow: hidden;
+    }
+}
+.box.addurl{
+    @include all-below-mobile-lg{
+        .urltext1 {
+            width: 57%;
+            padding-right: 0;
+        }
+        .urlbtn1 {
+            width: 43%;
+        }
+    }
+    .btn.urlbtn{
+        height: 30px;
+        min-width: 120px;
+        padding: 0;
+        font-size: 12px;
+        margin-top: 24px;
+        @include mx-mobile-xs{
+            min-width: 103px;
+        }
+        @include mx-tablet{
+            min-width: 105px;
+        }
+        @include mx-desktops{
+            min-width: 105px;
+        }
+    }
+    .col-lg-3{
+        @include mx-tablet{
+            padding-right: 0;
+        }
+        @include mx-desktops{
+            padding-right: 0;
+        }
+    }
+    
+}
+
+// imagepanel
+.imagepanel .box{
+    border: 1px solid #e3e3e3;
+    .box-header, .box-footer{
+        @extend %border0;
+    }
+    .box-header{
+        border-bottom: 1px solid #e3e3e3;
+    }
+}

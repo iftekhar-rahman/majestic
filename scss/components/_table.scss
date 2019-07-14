@@ -1,0 +1,26 @@
+/*================.table-css=====================*/
+.table {
+    margin-bottom: 0;
+    @extend %w100;
+    color: #212529;
+    @extend %white-bg-color;
+    td {
+        font-size: $body-font-size;
+    }
+}
+.table thead th {
+    border: 1px solid #e3e3e3;
+    padding: 1.7rem 0.9375rem;
+    white-space: nowrap;
+    @extend %posrelative;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+.table tbody tr td {
+    border: 1px solid #e3e3e3;
+    color: #08113b;
+    white-space: nowrap;
+    font-weight: 300;
+    padding: 1.1rem 0.9375rem;
+}

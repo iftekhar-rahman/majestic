@@ -1,0 +1,184 @@
+
+// off-canvas-wrapper css
+.offcanvas-menu-wrapper{
+    @extend %posrelative;
+    &:after{
+        @extend %pseudo;
+        @extend %h100;
+        right: 0;
+        top: 0;
+        background-color: #e3e3e3;
+        width: 1px;
+    }
+}
+.off-canvas-wrapper{
+    height: calc(100vh - 50px);
+    @extend %white-bg-color;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding: 0;
+    width: 257px;
+    z-index: 11;
+    transition: width 0.25s ease, background 0.25s ease;
+    -webkit-transition: width 0.25s ease, background 0.25s ease;
+    -moz-transition: width 0.25s ease, background 0.25s ease;
+    -ms-transition: width 0.25s ease, background 0.25s ease;
+    box-shadow: none;
+    &.active {
+        right: 0;
+    }
+    @include all-below-med{
+        position: fixed;
+        height: calc(100vh - 50px);
+        top: 60px;
+        bottom: 0;
+        overflow: auto;
+        right: -257px;
+        -webkit-transition: all 0.25s ease-out;
+        -o-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+        
+    }
+}
+.site-wrapper.show-alert .off-canvas-wrapper{
+    @include all-below-med{
+        top: 90px;
+    }    
+}
+.site-wrapper.show-alert.hide-alert .off-canvas-wrapper{
+    @include all-below-med{
+        top: 60px;
+    }    
+}
+.site-wrapper.sidebar-full{
+    .user-title{
+        display: none;
+    }
+}
+.user-details-block{
+    padding: 25px 12px 12px 12px;
+    border-bottom: 1px solid #f3f3f3;
+    .image{
+        @extend %overflowhidden;
+        @extend %margin0auto;
+        width: 50px;
+        border-radius:100%; 
+    }
+    .user-title{
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: 5px;
+    }
+}
+
+.sidemenu{
+    > li{
+        padding: 12px 40px 12px 20px;
+        border-bottom: 1px solid#f3f3f3;
+        @extend %posrelative;
+        i{
+            font-size: 18px;
+            margin-right: 12px;;
+        }
+        >a{
+            @include flexbox();
+            @include align-items(center);
+        }
+    }
+    a{
+        &:hover{
+            @extend %primary-color;
+        }
+    }
+    ul.sub-menu {
+        padding-left: 25px;
+        list-style: disc;
+        @extend %displaynone;
+    }
+    span.menu-expand {
+        @extend %posabsolute;
+        right: 20px;
+        top: 12px;
+        text-align: center;
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        i {
+            margin: 0;
+        }
+    }
+    
+}
+
+
+.icon-nav{
+    .sidemenu > li {
+        @extend %posrelative;
+        @include flexbox();
+        @include justify-content(center);
+        padding:10px 20px;
+        border-bottom: 1px solid #f3f3f3;
+        &:hover{
+            .menu-title{
+                @include flexbox();
+            }
+        }
+        a{
+            i{
+                margin: 0;
+            }
+        }
+        >.sub-menu{
+            margin-top: 37px;
+        }
+    }
+    .menu-title {
+        @extend %posabsolute;
+        @extend %h100;
+        z-index: 1000;
+        top: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        padding-left: 15px;
+        display: none;
+        box-shadow:0px 3px 21px 0px rgba(0, 0, 0, 0.2);
+    }
+    .sub-menu{
+        padding-left: 25px;
+        list-style: disc;
+        @extend %displaynone;
+        @extend %posabsolute;
+        left: 100%;
+        z-index: 999;
+        padding: 15px 20px;
+        box-shadow:0px 3px 21px 0px rgba(0, 0, 0, 0.2);
+    }
+    .sub-menu, .menu-title{
+        @extend %displaynone;
+        @extend %white-bg-color;
+        left: calc(100% + 1px);
+        width: 200px;
+    }
+    .menu-item-has-children{
+       &:hover{
+        > .sub-menu{
+            @extend %displayblock;
+        }
+       }
+       a{
+           .menu-title{
+            @extend %white-bg-color;
+            box-shadow:3px -12px 13px -11px rgba(0, 0, 0, 0.2);
+           }
+       }
+    }
+    .menu-expand{
+        visibility: hidden;
+        z-index: -999;
+    }
+}

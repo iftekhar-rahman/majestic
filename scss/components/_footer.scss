@@ -1,0 +1,19 @@
+
+/*=================.footer===================*/ 
+.footer {
+  background: #f3f3f3;
+  padding: 30px 1rem;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  font-size: calc(0.875rem - 0.05rem);
+  font-weight: 400;
+  border-top: 1px solid #e3e3e3;
+  .footerlogo {
+      img {
+          max-width: 100px;
+      }
+  }
+}
+

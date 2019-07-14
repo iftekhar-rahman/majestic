@@ -1,0 +1,203 @@
+
+// Transition
+// @mixin transition($transition...) {
+// 	-webkit-transition: $transition;
+// 	-moz-transition: $transition;
+// 	-ms-transition: $transition;
+// 	-o-transition: $transition;
+// 	transition: $transition;
+// }
+
+// flexbox
+@mixin flexbox{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+// Inline flex
+@mixin inline-flex{
+	display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+// Flexbox Direction
+@mixin flex-direction($value: row) {
+	@if $value == row-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: horizontal;
+	} @else if $value == column {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+	} @else if $value == column-reverse {
+		-webkit-box-direction: reverse;
+		-webkit-box-orient: vertical;
+	} @else {
+		-webkit-box-direction: normal;
+		-webkit-box-orient: horizontal;
+	}
+	-webkit-flex-direction: $value;
+	-moz-flex-direction: $value;
+	-ms-flex-direction: $value;
+	flex-direction: $value;
+}
+
+// Flexbox Justify Content
+// Values: flex-start | flex-end | center | space-between | space-around
+// Default: flex-start
+@mixin justify-content($value: flex-start) {
+	@if $value == flex-start {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+	} @else if $value == flex-end {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+	} @else if $value == space-between {
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+	} @else if $value == space-around {
+		-ms-flex-pack: distribute;		
+	} @else {
+		-webkit-box-pack: $value;
+		-ms-flex-pack: $value;
+	}
+	-webkit-justify-content: $value;
+	-moz-justify-content: $value;
+	justify-content: $value;
+}
+
+// Flex alignment
+@mixin align-items($value: stretch) {
+	@if $value == flex-start {
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+	} @else if $value == flex-end {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+	} @else {
+		-webkit-box-align: $value;
+		-ms-flex-align: $value;
+	}
+	-webkit-align-items: $value;
+	-moz-align-items: $value;
+	align-items: $value;
+}
+
+@mixin title-sep {
+    position: relative;
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 6px;
+        background-repeat: no-repeat;
+        @content;
+    }
+}
+
+@mixin flex($justify:flex-start, $align:center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin inline-flex($justify:flex-start, $align:center) {
+    display: inline-flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-column($justify:center, $align:flex-start) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin title($size, $weight:400, $family:$font-rubik) {
+    font-size: $size;
+    font-weight: $weight !important;
+    font-family: $family !important;
+}
+
+@mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+        @content;
+    }
+}
+
+@mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+        @content;
+    }
+    @include optional-at-root(':-moz-placeholder') {
+        @content;
+    }
+    @include optional-at-root('::-moz-placeholder') {
+        @content;
+    }
+    @include optional-at-root(':-ms-input-placeholder') {
+        @content;
+    }
+}
+
+
+@mixin section-padding-both($value){
+    padding-top:60px;
+    padding-bottom:60px;
+    @include tablet{
+        padding-top:80px;
+        padding-bottom:80px;
+    }
+    @include desktops{
+        padding-top:$value;
+        padding-bottom:$value;
+    }
+}
+@mixin section-padding-top($value){
+    padding-top:60px;
+    @include tablet{
+        padding-top:80px;
+    }
+    @include desktops{
+        padding-top:$value;
+    }
+}
+@mixin section-padding-bottom($value){
+    padding-bottom:60px;
+    @include tablet{
+        padding-bottom:80px;
+    }
+    @include desktops{
+        padding-bottom:$value;
+    }
+}
+//-------------
+//PlaceHolders
+%border-bottom {
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        background: #ececec;
+        left: 25px;
+        height: 1px;
+        bottom: -1px;
+        right: 25px;
+    }
+}
+
+%border-left {
+    position: relative;
+    &:before {
+        content: "";
+        width: 1px;
+        position: absolute; // background: $border-color;
+        left: 0;
+        top: 10px;
+        bottom: 5px;
+    }
+}

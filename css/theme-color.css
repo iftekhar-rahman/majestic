@@ -1,0 +1,78 @@
+/* ====Dashboard Tab section icons color======*/
+/* =====Alert Color=====*/
+/* ======Update messages Color=======*/
+/* Body Text Color*/
+body {
+  color: #000000;
+}
+
+/* =========Highlight Color=========*/
+.sidemenu a:hover, .breadcrumb-row .breadcrumb li a, .nav-tabs .nav-item .nav-link.active, .statusLinks a, .box-toolbar .toolbar-link a:hover, .box-content .table thead th a:hover, .tab-wrapper .nav-tabs a.active, .auth .input-group .input-group-text, .auth .auth-link:hover, .auth .create-text a {
+  color: #DF3239;
+}
+
+/* =========Highlight Background Color=========*/
+.navbar-options .nav-item.dropdown .nav-link.count-indicator .count, .btn, .btn:hover, .btn-secondary.active:not(:disabled):not(.disabled), .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle, .pagination li:hover a, table.vehicleBrowse td .dataAlert, .auth .login-half, .form-check .form-check-label input[type="checkbox"]:checked + .input-helper:before {
+  background-color: #DF3239;
+}
+
+/* =========Highlight Border Color=========*/
+.nav-tabs .nav-item .nav-link.active, .form-check .form-check-label input[type=checkbox] + .input-helper:before {
+  border-color: #DF3239;
+}
+
+table.vehicleBrowse td.days90l {
+  border-left-color: #DF3239;
+}
+
+table.vehicleBrowse td.days90r {
+  border-right-color: #DF3239;
+}
+
+/* =========.dashboard-tabs Icons color==========*/
+.dashboard-tabs i.mdi-calendar-heart {
+  color: #FE9900;
+}
+
+.dashboard-tabs i.mdi-currency-usd {
+  color: #FF3300;
+}
+
+.dashboard-tabs i.mdi-eye {
+  color: #98CB00;
+}
+
+.dashboard-tabs i.mdi-download {
+  color: #0000FE;
+}
+
+.dashboard-tabs i.mdi-flag {
+  color: #CC0098;
+}
+
+/*=== Actions buttons color on Listing page====*/
+table.vehicleBrowse .btn.action-btn-1 {
+  background-color: #82b346;
+}
+
+table.vehicleBrowse .btn.action-btn-2 {
+  background-color: #b75959;
+}
+
+table.vehicleBrowse .btn.action-btn-3 {
+  background-color: #25abc0;
+}
+
+/* ==========.site-alert and .update-message ===========*/
+.site-alert {
+  background-color: #FFF1DC;
+}
+
+.site-alert a {
+  color: red;
+}
+
+.update-message {
+  background-color: #9BFFFF;
+}
+/*# sourceMappingURL=theme-color.css.map */

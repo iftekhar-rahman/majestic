@@ -1,0 +1,90 @@
+// ========Theme color Variables========== //
+$body-color: #000000;
+$primary-color:#DF3239;
+
+/* ====Dashboard Tab section icons color======*/
+$date-icon-color        : #FE9900;
+$download-icon-color    : #FF3300;
+$views-icon-color       : #98CB00;
+$revenue-icon-color     : #0000FE;
+$flagged-icon-color     : #CC0098;
+
+/* =====Alert Color=====*/
+$alert-bg: #FFF1DC;
+$alert-link-color: #FF0303;
+/* ======Update messages Color=======*/
+$update-message-bg-color: #9BFFFF;
+
+/* Body Text Color*/
+body{
+    color: #000000;
+}
+
+/* =========Highlight Color=========*/
+.sidemenu a:hover, .breadcrumb-row .breadcrumb li a, .nav-tabs .nav-item .nav-link.active, .statusLinks a, .box-toolbar .toolbar-link a:hover, .box-content .table thead th a:hover, .tab-wrapper .nav-tabs a.active, .auth .input-group .input-group-text, .auth .auth-link:hover, .auth .create-text a {
+    color: $primary-color;
+}
+/* =========Highlight Background Color=========*/
+.navbar-options .nav-item.dropdown .nav-link.count-indicator .count, .btn, .btn:hover, .btn-secondary.active:not(:disabled):not(.disabled), .btn-secondary:not(:disabled):not(.disabled):active, .show > .btn-secondary.dropdown-toggle, .pagination li:hover a, table.vehicleBrowse td .dataAlert, .auth .login-half, .form-check .form-check-label input[type="checkbox"]:checked + .input-helper:before {
+    background-color: $primary-color;
+}
+/* =========Highlight Border Color=========*/
+.nav-tabs .nav-item .nav-link.active, .form-check .form-check-label input[type=checkbox] + .input-helper:before{
+    border-color: $primary-color;
+}
+table.vehicleBrowse td.days90l{
+    border-left-color: $primary-color;
+}
+table.vehicleBrowse td.days90r {
+    border-right-color: $primary-color;
+}
+
+/* =========.dashboard-tabs Icons color==========*/
+.dashboard-tabs i.mdi-calendar-heart {
+    color: $date-icon-color;
+}
+.dashboard-tabs i.mdi-currency-usd {
+    color: $download-icon-color;
+}
+.dashboard-tabs i.mdi-eye {
+    color: $views-icon-color ;
+}
+.dashboard-tabs i.mdi-download {
+    color: $revenue-icon-color;
+}
+.dashboard-tabs i.mdi-flag {
+    color: $flagged-icon-color;
+}
+
+/*=== Actions buttons color on Listing page====*/
+$action-btn-1: #82b346;
+$action-btn-2: #b75959;
+$action-btn-3: #25abc0;
+table.vehicleBrowse .btn.action-btn-1 {
+    background-color: $action-btn-1;
+}
+table.vehicleBrowse .btn.action-btn-2 {
+    background-color: $action-btn-2;
+}
+table.vehicleBrowse .btn.action-btn-3 {
+    background-color: $action-btn-3;
+}
+
+/* ==========.site-alert and .update-message ===========*/
+.site-alert {
+    background-color: $alert-bg;
+    a{
+        color: red;
+    }
+}
+.update-message {
+    background-color: $update-message-bg-color;
+}
+
+
+
+
+
+
+
+

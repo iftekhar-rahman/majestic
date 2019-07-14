@@ -1,0 +1,113 @@
+/*=============.layout-css====================*/ 
+.page-body-wrapper{
+    @include flexbox();
+    @include flex-direction(row);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 50px;
+}
+.site-wrapper.sidebar-full{
+    .brand-wrapper{
+        width: 70px;
+        .brand-inner{
+            margin-right: 0;
+            margin-left: 0;
+            @include justify-content(center);
+        }
+    }
+    .navbar-logo{
+        @extend %displaynone;
+    }
+    .header-content{
+        width: calc(100% - 70px);
+    }
+    .off-canvas-wrapper{
+        width: 70px;
+    }
+
+    .main-panel {
+        width: calc(100% - 70px);
+    }
+}
+
+.main-panel {
+    transition: width 0.25s ease, margin 0.25s ease;
+    width: calc(100% - 257px);
+    min-height: calc(100vh - 60px);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    @include all-below-med{
+        width: calc(100% - 0px);
+    }
+    .content-wrapper{
+        background: #f3f3f3;
+        padding: 2.1rem 1.04rem;
+        @extend %w100;
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+    }
+}
+
+
+/* update message 2 styling */
+.update-message-2{
+    position: fixed;
+    z-index: 9999;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 15px 20px;
+    width: 400px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #000;
+    font-weight: 500;
+    text-align: center;
+    border: 2px solid #25a9c1;
+    transition: .4s;
+    opacity: 1;
+    i{
+        font-size: 25px;
+        color: #25a9c1;
+    }
+}
+.update-alert-close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ccc;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+
+// Stock Page
+
+
+.stock-tab-head{
+    padding-bottom: 10px;
+    
+    .result-text {
+        font-weight: 600;
+        margin-bottom: 10px;
+        a {
+            font-weight: 400;
+        }
+
+    }
+    .status-bar {
+        @include tablet{
+            text-align: right;
+        }
+        a {
+            color: #25a9c1;
+            +a{
+                margin-left: 3px;
+            }
+        }
+    }
+}

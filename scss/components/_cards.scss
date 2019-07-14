@@ -1,0 +1,58 @@
+/*==============.card-css====================*/ 
+.grid-margin {
+    margin-bottom: 1.875rem;
+}
+.stretch-card {
+    @include flexbox();
+    -webkit-align-items: stretch;
+    align-items: stretch;
+    -webkit-justify-content: stretch;
+    justify-content: stretch;
+}
+.stretch-card > .card {
+    @extend %w100;
+    min-width: 100%;
+}
+.card {
+    @extend %posrelative;
+    @include flexbox();
+    @include flex-direction(column);
+    min-width: 0;
+    word-wrap: break-word;
+    @extend %white-bg-color;
+    background-clip: border-box;
+    border: 1px solid #e3e3e3;
+    @extend %borderradius0;
+    .card-body {
+        padding: 24px 30px;
+    }
+    .card-title {
+        @extend %uppercase;
+        color: #4a4a4a;
+        font-weight: bold;
+        margin-bottom: 24px;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 40px;
+        @extend %black-color;
+        margin-bottom: 10px;
+    }
+    h4 {
+        font-size: 20px;
+        @extend %black-color;
+        margin-bottom: 7px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

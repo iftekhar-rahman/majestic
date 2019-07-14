@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Dashboard</title>
+
+  <!--Libraries-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/materialdesignicons.min.css">
+  <!-- Plugins -->
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/perfect-scrollbar.min.css">
+  <!--Theme specific styles-->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- 
+  // Uncomment the below css file and change the color as the clients requirement 
+  -->
+  <!-- <link rel="stylesheet" href="css/theme-color.css"> -->
+
+  <!--Core jQuery-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+
+  <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="site-wrapper">
+ 
+    <!-- .site-alert satrts -->
+    <div class="site-alert d-flex justify-content-center align-items-center w-100">
+      <p>There ara 3 critical alerts <a href="#" target="_blank">Click here</a></p>
+    </div><!-- .site-alert ends -->
+    <!-- .update-message satrts -->
+    <div class="update-message d-flex justify-content-center align-items-center w-100">
+      Record Updated
+    </div><!-- .update-message ends -->
+
+    <!-- .update-message-2 satrts -->
+    <div class="update-message-2">
+        <i class="mdi mdi-check-circle mr-3"></i>Test alert initialise<a href="#" class="update-alert-close"></a>  
+    </div><!-- .update-message-2 ends -->
+
+
+    <header class="dash-header fixed-top">
+      <!-- Brands -->
+      <div class="brand-wrapper">
+        <div class="brand-inner">
+          <a href="./index.html" class="navbar-brand navbar-logo">
+            <img src="img/logo.png" alt="site Logo" />
+          </a>
+          <a href="./index.html" class="navbar-brand navbar-logo-mini">
+            <img src="./img/autohq-mobile-a.png" alt="" />
+          </a>
+          <button class="navbar-toggler off-canvas-toggler d-none d-lg-block align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-sort-variant"></span>
+          </button>
+        </div>
+      </div>
+      <!-- Header Contents -->
+      <div class="header-content">
+        <!-- .search-bar starts -->
+        <div class="search-bar mr-md-5 w-100 ">
+          <div class="input-group">
+            <label for="h-search-bar">
+              <i class="mdi mdi-magnify"></i>
+            </label>
+            <input type="text" id="h-search-bar" class="form-contol" placeholder="Search now" />
+          </div>
+        </div><!-- .search-bar ends -->
+        <!-- .navbar-nav starts -->
+        <ul class="navbar-nav navbar-options">
+          <li class="nav-item dropdown mr-1">
+            <a class="nav-link count-indicator d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="mdi mdi-message-text mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
+              <p class=" dropdown-header">Messages</p>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <img src="img/avatars/face1.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="item-content flex-grow">
+                  <h6 class="ellipsis font-weight-normal">David Grey
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    The meeting is cancelled
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <img src="img/avatars/face2.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="item-content flex-grow">
+                  <h6 class="ellipsis font-weight-normal">Tim Cook
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    New product launch
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <img src="img/avatars/face3.jpg" alt="image" class="profile-pic">
+                </div>
+                <div class="item-content flex-grow">
+                  <h6 class="ellipsis font-weight-normal"> Johnson
+                  </h6>
+                  <p class="font-weight-light small-text text-muted mb-0">
+                    Upcoming board meeting
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown mr-4 position-relative">
+            <a class="nav-link count-indicator d-flex align-items-center justify-content-center notification-dropdown" id="notificationDropdown" href="#" data-toggle="dropdown" aria-expanded="true">
+              <i class="mdi mdi-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-success">
+                    <i class="mdi mdi-information mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-warning">
+                    <i class="mdi mdi-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-info">
+                    <i class="mdi mdi-account-box mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown ml-2">
+            <a class="nav-link profile-toggle" id="profileDropdown" href="#" data-toggle="dropdown" aria-expanded="true">
+              <img src="./img/avatars/face10.jpg" alt="">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right profileDropdownMenu navbar-dropdown animated flipInY" aria-labelledby="profileDropdown">
+              <div class="proDropdown-header">
+                <div class="image">
+                  <img src="./img/avatars/face12.jpg" alt="">
+                </div>
+                <div class="proDropdown-content">
+                  <h3 class="title">Steve Jobs</h3>
+                  <p>varun@gmail.com</p>
+                  <a href="" class="btn ">view profile</a>
+                </div>
+              </div>
+              <ul class="dropdown-list">
+                <li class="dropdown-item"><a href="#"><i class="ti-user"></i>
+                    My Profile</a></li>
+                <li class="dropdown-item"><a href="#"><i class="ti-wallet"></i> My Balance</a></li>
+                <li class="dropdown-item border-bottom"><a href="#"><i class="ti-email"></i> Inbox</a></li>
+                <li class="dropdown-item border-bottom"><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
+                <li class="dropdown-item "><a href="#"><i class="ti-settings"></i> Login Out</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <!-- .navbar-nav ends -->
+        <button class="close-btn navbar-toggler navbar-toggler-right align-self-center d-block d-lg-none" type="button" data-toggle="minimize">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+    </header>
+    <div class="page-body-wrapper container-fluid">
+      <!-- Offcanvas Markup -->
+      <!-- Off Canvas Menu -->
+      <div class="offcanvas-menu-wrapper">
+        <!-- Off Canvas Trigger Button -->
+        <!-- <a href="#" class="off-canvas-btn">
+        <span class=" fas fa-arrow-right"></span>
+    </a> -->
+        <aside class="off-canvas-wrapper">
+          <!-- Off Canvas Body -->
+          <div class="off-canvas-inner">
+            <div class="user-details-block">
+              <div class="image">
+                <img src="img/avatars/face14.jpg" alt="">
+              </div>
+              <div class="user-title text-center">
+                <p>Jhon Dowe</p>
+              </div>
+            </div>
+            <!-- mobile menu navigation start -->
+            <nav class="off-activation off-canvas-nav">
+              <ul class="sidemenu offcanvas-menu">
+                <li class="menu-item">
+                  <a href="#"><i class="mdi mdi-home menu-icon"></i><span class="menu-title">Dashboard</span></a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#"><i class="mdi mdi-grid-large menu-icon"></i><span class="menu-title">Listing (Basic)</span></a>
+                  <ul class="sub-menu">
+                    <li class="menu-item-has-children">
+                      <a href="#">Basic 1</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog.html">sub item</a></li>
+                        <li><a href="blog-left-sidebar.html">sub item</a></li>
+                        <li><a href="blog-right-sidebar.html">sub item</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Basic 2</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog-list.html">subitem 1</a></li>
+                        <li><a href="blog-list-left-sidebar.html">subitem 2</a></li>
+                        <li><a href="blog-list-right-sidebar.html">subitem 2</a></li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                      <a href="#">Basic 3</a>
+                      <ul class="sub-menu">
+                        <li><a href="blog-details.html">subitem 1</a></li>
+                        <li><a href="blog-details-gallery.html">subitem 2</a></li>
+                        <li><a href="blog-details-audio.html">subitem 3</a></li>
+                        <li><a href="blog-details-video.html">subitem 4</a></li>
+                        <li><a href="blog-details-left-sidebar.html">subitem 5</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="#"><i class="mdi mdi-grid-large menu-icon"></i><span class="menu-title">Listing (Basic)</span></a>
+                </li>
+                <li class="menu-item">
+                  <a href="#"><i class="mdi mdi-settings "></i><span class="menu-title">Edit</span></a>
+                </li>
+                <li class="menu-item">
+                  <a href="#"><i class="mdi mdi-login "></i><span class="menu-title">Login</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+      </div>
+      <!-- .main-panel starts -->
+      <div class="main-panel">
+        <!-- .content-wrappe starts -->
+        <div class="content-wrapper">
+          <!-- .breadcrumb row starts here -->
+          <div class="row breadcrumb-row">
+            <div class="col-sm-8 align-self-center">
+              <h1 class="text-themecolor mb-0 mt-0">Dashboard</h1>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li><i class="mdi mdi-chevron-right"></i></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+              </ol>
+            </div>
+            <div class="col-sm-4 breadcrumb-btn d-flex justify-content-end align-self-center">
+              <button class="btn hidden-sm-down btn-success"><i class="mdi mdi-plus-circle"></i> Create</button><!-- .button ends -->
+              <button class="btn hidden-sm-down btn-success ml-3 update-alert-trigger" ><i class="mdi mdi-plus-circle"></i> Update alert</button><!-- test alert button ends -->
+            </div>
+          </div>
+          <!-- .breadcrumb row starts here -->
+          
+          <!-- accordion starts -->
+          <div class="accordion accordion-wrapper" id="accordionExample">
+            <!-- .card starts -->
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Customer details
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  <form action="#">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <select name="" id="">
+                          <option value="title">Title</option>
+                          <option value="">Mr</option>
+                          <option value="">Mrs</option>
+                          <option value="">Ms</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <label for="">First name</label>
+                        <input type="text" placeholder="First name">
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="">Last name</label>
+                        <input type="text" placeholder="Last name">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <label for="">Phone Number (home)</label>
+                        <input type="tel" placeholder="Phone Number">
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="">Phone number (mobile)</label>
+                        <input type="tel" placeholder="Phone Number">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <label for="">Phone Number (work)</label>
+                        <input type="tel" placeholder="Phone Number">
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="">Email</label>
+                        <input type="tel" placeholder="Email address">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div><!-- .card ends -->
+            <!-- .card starts -->
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Media
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                  <form action="#">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <label for="">Where did you hear about Junction 17?</label>
+                        <select name="" id="">
+                          <option value="">Google search</option>
+                          <option value="">Google ad</option>
+                          <option value="">Facebook</option>
+                          <option value="">Radio</option>
+                          <option value="">Word-of-mouth</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div><!-- .card ends -->
+            <!-- .card starts -->
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Trade in
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                  <form action="#">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <label for="">Vehicle registration number.</label>
+                        <select name="" id="">
+                          <option value="">Above average</option>
+                          <option value="">below average</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div><!-- .card ends -->
+            <!-- .card starts -->
+            <div class="card">
+              <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                  <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#headingFour" aria-expanded="false" aria-controls="headingFour">
+                    Vehicle quotes
+                  </button>
+                </h2>
+              </div>
+              <div id="headingFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div><!-- .card ends -->
+            <!-- .card starts -->
+            <div class="card">
+              <div class="card-header" id="headingFive">
+                <h2 class="mb-0">
+                  <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#headingFive" aria-expanded="false" aria-controls="headingFive">
+                    Vehicle sourcing
+                  </button>
+                </h2>
+              </div>
+              <div id="headingFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div><!-- .card ends -->
+          </div>
+          <!-- accordion ends -->
+
+        </div>
+        <!-- .content-wrappe ends -->
+        <!-- .footer starts -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright &copy; 2018 <a href="#" target="_blank">AutoHQ</a>. All rights reserved.</span>
+            <!-- copyright-text ends -->
+            <span class="footerlogo float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+              <a href="#"><img src="img/logo.png" alt=""></a>
+            </span><!-- footer-logo ends -->
+          </div>
+        </footer>
+        <!-- .footer ends -->
+      </div>
+      <!-- .main-panel ends -->
+    </div>
+  </div>
+  
+  <!--Libraries-->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="js/jquery.nice-select.min.js"></script>
+  <script src="js/perfect-scrollbar.jquery.min.js"></script>
+  <!--Active & Custom JS-->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+/*================.login-page-css===================*/ 
+
+.login-half-bg{background: url(../img/login-bg.jpg);}
+
+.container-scroller {
+    @extend %overflowhidden;
+}
+// .page-body-wrapper
+.page-body-wrapper {
+    min-height: calc(100vh - 60px);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 60px;
+    &.full-page-wrapper {
+        @extend %w100;
+        min-height: 100vh;
+        padding-top: 0;
+    }
+}
+.auth.auth-img-bg {
+    padding: 0;
+}
+.content-wrapper {
+    @extend %w100;
+    background: #f3f3f3;
+    padding: 2.1rem 1.04rem;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+.auth {
+    h4{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    h6{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .flex-grow {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+    .brand-logo {
+        margin-bottom: 2rem;
+        img {
+            width: 150px;
+        }
+    }
+    .login-half {
+        @extend %posfixed;
+        right: 0;
+        top: 0;
+        width: 50%;
+        @extend %h100;
+        background-size: cover;
+        background-position: center;
+        @extend %primary-bg-color;
+        @include all-below-med{
+            display: none;
+        }
+    }
+    .zeroheght{
+        @include all-below-med{
+            height: 0px;
+        }
+    }
+    .copyright {
+        position: absolute;
+        right: 0;
+        bottom: 15px;
+        left: 0;
+        @include all-below-med{
+            color: #000000 !important;
+        }
+    }
+    &.auth-img-bg{
+        .auth-form-transparent{
+            width: 55%;
+            margin: auto;
+            @include all-below-mobile-lg{
+                width: 90%;
+            }
+            @include mx-desktops{
+                width: 65%;
+            }
+        }
+    }
+    .form-group{
+        label {
+            font-size: 13px;
+        }
+    }
+    .input-group {
+        @extend %posrelative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        -ms-grid-row-align: stretch;
+        align-items: stretch;
+        @extend %w100;
+        height: 55px;
+        input {
+            height: 55px;
+            width: 1% !important;
+            border: 1px solid #e3e3e3;
+            background: #F3F3F3;
+        }
+        input:focus {
+            background: #F3F3F3;
+            border: 1px solid #e3e3e3;
+        }
+        .input-group-text {
+            border-color: #e3e3e3;
+            @extend %backtransparent;
+            @extend %borderradius0;
+            @extend %primary-color;
+        }
+    }
+    .auth-link {
+        @extend %black-color;
+        &:hover{
+            text-decoration: underline;
+            @extend %primary-color;
+        }
+    }
+    .btn{
+        height: 50px;
+    }
+    .create-text{
+        a{
+            @extend %primary-color;
+           &:hover{
+                text-decoration: underline;
+           }
+        }
+    }
+}
+
+// .form-check
+.form-check {
+    @extend %posrelative;
+    @extend %displayblock;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 0;
+    .form-check-label {
+        min-height: 18px;
+        @extend %displayblock;
+        margin-left: 1.75rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        @extend %cursorpointer;
+        input {
+            @extend %posabsolute;
+            @extend %cursorpointer;
+            top: 0;
+            left: 0;
+            margin-left: 0;
+            margin-top: 0;
+            z-index: 1;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+    }
+}
+.form-check .form-check-label input[type=checkbox] + .input-helper:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    border: solid $primary-color;
+    border-width: 2px;
+    -webkit-transition: all;
+    -moz-transition: all;
+    -ms-transition: all;
+    -o-transition: all;
+    transition: all;
+    transition-duration: 0s;
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+}
+.form-check .form-check-label input[type=checkbox] + .input-helper:after {
+    -webkit-transition: all;
+    -moz-transition: all;
+    -ms-transition: all;
+    -o-transition: all;
+    transition: all;
+    transition-duration: 0s;
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+    font-family: Material Design Icons;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    content: '\F12C';
+    font-size: .9375rem;
+    font-weight: bold;
+    @extend %white-color;
+}
+.form-check .form-check-label input[type=checkbox] + .input-helper:before, .form-check .form-check-label input[type=checkbox] + .input-helper:after {
+    @extend %posabsolute;
+    top: 0;
+    left: 0;
+}
+.form-check .form-check-label input[type="checkbox"]:checked + .input-helper:before {
+    @extend %primary-bg-color;
+    border-width: 0;
+}
+.form-check .form-check-label input[type="checkbox"]:checked + .input-helper:after {
+    width: 18px;
+    opacity: 1;
+    line-height: 18px;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}

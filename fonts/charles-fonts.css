@@ -1,0 +1,16 @@
+
+
+@font-face {
+    font-family: 'charles_wright_bold_capsRg';
+    src: url('charles_wright_bold_capsRg.eot');
+    src: url('charles_wright_bold_capsRg.eot?#iefix') format('embedded-opentype'),
+        url('charles_wright_bold_capsRg.woff2') format('woff2'),
+        url('charles_wright_bold_capsRg.woff') format('woff'),
+        url('charles_wright_bold_capsRg.ttf') format('truetype'),
+        url('charles_wright_bold_capsRg.svg#charles_wright_bold_capsRg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+

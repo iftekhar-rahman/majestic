@@ -1,0 +1,154 @@
+/*>>>>>>>> Reset <<<<<<<<<*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $body-font;
+    font-size: $body-font-size;
+    line-height: $body-line-height;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+a,
+span {
+    @extend %displayinline;
+}
+
+a {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: inherit;
+    &:focus {
+        outline: none !important;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+     margin: 0;
+}
+
+a, a:hover, a:focus, a:active, button, button:focus, 
+input, input:focus, select, textarea, textarea:focus, .slick-slide, .slick-slide:focus, .slick-slide:active{
+    outline: 0 solid ;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    line-height: 1.75;
+}
+
+.btn:focus,
+.btn:active {
+    box-shadow: none;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* No gutters */
+
+.no-gutters-lg {
+    @include desktops {
+        >.col,
+        >[class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    @include large-desktops {
+        >.col,
+        >[class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+    @include extra-large-desktops {
+        >.col,
+        >[class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+}
+
+.nice-select {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    float: none;
+}
+
+.form-control {
+    @extend %displayinline;
+    padding: 10px 15px;
+    line-height: 30px;
+    height: 52px;
+    color: #7b7b7b;
+    font-size: 15px;
+    @extend %w100;
+    border: 2px solid #e3e3e3;
+    @extend %white-bg-color;
+    border-radius: 3px;
+    box-shadow: none;
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        border: 2px solid #eeeeee;
+    }
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content};
+    :-moz-placeholder           {@content};
+    ::-moz-placeholder          {@content};
+    :-ms-input-placeholder      {@content} ; 
+}
