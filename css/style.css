@@ -2878,21 +2878,39 @@ table.vehicleBrowse td .dataAlert {
   margin-bottom: 10px;
 }
 
+@media (min-width: 768px) {
+  .stock-tab-head .result-text {
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+}
+
 .stock-tab-head .result-text a {
   font-weight: 400;
 }
 
+.stock-tab-head .status-bar {
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+
 @media (min-width: 768px) {
   .stock-tab-head .status-bar {
+    padding: 5px 15px;
     text-align: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid #e5e5e5;
   }
 }
 
 .stock-tab-head .status-bar a {
   color: #25a9c1;
-}
-
-.stock-tab-head .status-bar a + a {
-  margin-left: 3px;
+  margin-left: 5px;
 }
 /*# sourceMappingURL=style.css.map */
